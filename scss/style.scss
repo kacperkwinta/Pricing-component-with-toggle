@@ -1,0 +1,25 @@
+// COLORS
+
+$color-primary-1: hsl(236, 72%, 79%);
+$color-primary-2: hsl(237, 63%, 64%);
+
+$color-neutral-1: hsl(240, 78%, 98%);
+$color-neutral-2: hsl(234, 14%, 74%);
+$color-neutral-3: hsl(233, 13%, 49%);
+$color-neutral-4: hsl(232, 13%, 33%);
+
+* {
+	box-sizing: inherit;
+	font-family: inherit;
+}
+
+html {
+	font-family: "Montserrat", sans-serif;
+	font-size: 62.5%;
+    font-size: 700;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1.5rem;
+}
