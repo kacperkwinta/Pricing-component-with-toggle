@@ -11,15 +11,19 @@ $color-neutral-4: hsl(232, 13%, 33%);
 * {
 	box-sizing: inherit;
 	font-family: inherit;
+	padding: 0;
+	margin: 0;
 }
 
 html {
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
-    font-size: 700;
+	font-weight: 700;
 	box-sizing: border-box;
 }
 
 body {
 	font-size: 1.5rem;
+	background: url(../images/bg-top.svg) no-repeat no-repeat top right,
+		url(../images/bg-bottom.svg) no-repeat no-repeat bottom 100% left ;
 }
