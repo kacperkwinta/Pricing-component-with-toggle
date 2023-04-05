@@ -7,7 +7,6 @@
 - SCSS
 - JS
 - Flexbox
-- Grid
 - @media
 
 ### Links 🌐
