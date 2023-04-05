@@ -30,8 +30,8 @@ html {
 
 body {
 	font-size: 1.5rem;
-	background: url(../images/bg-top.svg) no-repeat no-repeat top right;
-	background: url(../images/bg-bottom.svg) no-repeat no-repeat top left;
+	background: url(../images/bg-top.svg) no-repeat no-repeat top right,
+		url(../images/bg-bottom.svg) no-repeat no-repeat bottom left;
 }
 
 //////////////////////////////
@@ -56,7 +56,7 @@ header {
 
 	.annually--active,
 	.monthly--active {
-		color: $color-primary-2;
+		color: $color-primary-1;
 	}
 
 	.toggle {
@@ -64,11 +64,16 @@ header {
 		background-color: rosybrown;
 		padding: 0.3rem;
 		border-radius: 10rem;
-		background: linear-gradient($color-primary-1, $color-primary-2);
+		background: linear-gradient(to right, $color-primary-1, $color-primary-2);
 		cursor: pointer;
+		transition: all 0.1s ease;
 
 		display: flex;
 		justify-content: flex-end;
+
+		&:hover {
+			opacity: 0.7;
+		}
 
 		.dot {
 			width: 1.6rem;
@@ -89,4 +94,71 @@ header {
 //////////////////////////////
 .header-1 {
 	color: $color-neutral-3;
+	font-size: 3.2rem;
+}
+
+.header-2 {
+	font-size: 1.8rem;
+	color: $color-neutral-3;
+}
+
+//////////////////////////////
+/// CARD
+//////////////////////////////
+
+// container for cards
+main {
+	margin: 0 auto;
+	max-width: 120rem;
+	display: flex;
+}
+
+.card {
+	flex-basis: 33%;
+	border-radius: 1rem;
+	padding: 3.2rem;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	text-align: center;
+
+	&__price {
+		margin: 2.4rem auto 3.2rem auto;
+		font-size: 6rem;
+		color: $color-neutral-4;
+	}
+
+	&__feature {
+		padding: 2.4rem 0;
+		color: $color-neutral-3;
+
+		&:nth-child(odd) {
+			border-top: 1px solid hsl(0, 0%, 91%);
+			border-bottom: 1px solid hsl(0, 0%, 91%);
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			display: block;
+			margin-top: 3.2rem;
+			padding: 1.2rem 0;
+			border-radius: 0.5rem;
+			border: 1px solid transparent;
+			background: linear-gradient(to right, $color-primary-1, $color-primary-2);
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $color-neutral-1;
+			letter-spacing: 2px;
+			font-size: 1.4rem;
+			cursor: pointer;
+			transition: all 0.1s ease;
+		}
+
+		&:hover,
+		&:active {
+			background: #fff;
+			color: $color-primary-2;
+			border: 1px solid #000;
+		}
+	}
 }
