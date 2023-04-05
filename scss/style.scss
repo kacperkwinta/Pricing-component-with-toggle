@@ -29,6 +29,7 @@ html {
 }
 
 body {
+	height: 93vh;
 	font-size: 1.5rem;
 	background: url(../images/bg-top.svg) no-repeat no-repeat top right,
 		url(../images/bg-bottom.svg) no-repeat no-repeat bottom left;
@@ -38,7 +39,7 @@ body {
 /// HEADER
 //////////////////////////////
 header {
-	margin: 6.4rem auto;
+	margin-top: 6.4rem;
 	text-align: center;
 
 	.wrapper {
@@ -108,16 +109,18 @@ header {
 
 // container for cards
 main {
-	margin: 0 auto;
+	margin: 12.6rem auto;
 	max-width: 120rem;
 
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	gap: 1.2rem;
 }
 
 .card {
 	flex-basis: 35rem;
+	height: fit-content;
 	border-radius: 1rem;
 	padding: 3.2rem;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -194,7 +197,7 @@ main {
 			background: $color-neutral-1;
 			color: $color-primary-2;
 			transition: all 0.2s ease;
-			
+
 			&:hover {
 				background: transparent;
 				border: 1px solid $color-neutral-1;
