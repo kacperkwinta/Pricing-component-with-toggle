@@ -110,11 +110,14 @@ header {
 main {
 	margin: 0 auto;
 	max-width: 120rem;
+
 	display: flex;
+	justify-content: center;
+	gap: 1.2rem;
 }
 
 .card {
-	flex-basis: 33%;
+	flex-basis: 35rem;
 	border-radius: 1rem;
 	padding: 3.2rem;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -122,12 +125,12 @@ main {
 
 	&__price {
 		margin: 2.4rem auto 3.2rem auto;
-		font-size: 6rem;
+		font-size: 6.4rem;
 		color: $color-neutral-4;
 	}
 
 	&__feature {
-		padding: 2.4rem 0;
+		padding: 1.8rem 0;
 		color: $color-neutral-3;
 
 		&:nth-child(odd) {
@@ -151,14 +154,52 @@ main {
 			letter-spacing: 2px;
 			font-size: 1.4rem;
 			cursor: pointer;
-			transition: all 0.1s ease;
+			transition: all 0.2s ease;
 		}
 
 		&:hover,
 		&:active {
 			background: #fff;
 			color: $color-primary-2;
-			border: 1px solid #000;
+			border: 1px solid $color-primary-1;
+		}
+
+		&--accent {
+			background-color: #fff;
+		}
+	}
+}
+
+.card--accent {
+	background: linear-gradient(to right, $color-primary-1, $color-primary-2);
+	transform: scale(1.1);
+
+	h2,
+	p {
+		color: $color-neutral-1 !important;
+	}
+
+	.card {
+		&__feature {
+			padding: 1.8rem 0;
+			color: $color-neutral-3;
+
+			&:nth-child(odd) {
+				border-top: 1px solid hsl(237, 63%, 84%);
+				border-bottom: 1px solid hsl(237, 63%, 84%);
+			}
+		}
+
+		&__link {
+			background: $color-neutral-1;
+			color: $color-primary-2;
+			transition: all 0.2s ease;
+			
+			&:hover {
+				background: transparent;
+				border: 1px solid $color-neutral-1;
+				color: $color-neutral-1;
+			}
 		}
 	}
 }
