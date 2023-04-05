@@ -1,5 +1,6 @@
-// COLORS
-
+//////////////////////////////
+/// COLORS
+//////////////////////////////
 $color-primary-1: hsl(236, 72%, 79%);
 $color-primary-2: hsl(237, 63%, 64%);
 
@@ -8,6 +9,9 @@ $color-neutral-2: hsl(234, 14%, 74%);
 $color-neutral-3: hsl(233, 13%, 49%);
 $color-neutral-4: hsl(232, 13%, 33%);
 
+//////////////////////////////
+/// RESET
+//////////////////////////////
 * {
 	box-sizing: inherit;
 	font-family: inherit;
@@ -15,6 +19,9 @@ $color-neutral-4: hsl(232, 13%, 33%);
 	margin: 0;
 }
 
+//////////////////////////////
+/// GENERAL STYLES
+//////////////////////////////
 html {
 	font-family: "Montserrat", sans-serif;
 	font-size: 62.5%;
@@ -25,5 +32,53 @@ html {
 body {
 	font-size: 1.5rem;
 	background: url(../images/bg-top.svg) no-repeat no-repeat top right,
-		url(../images/bg-bottom.svg) no-repeat no-repeat bottom 100% left ;
+		url(../images/bg-bottom.svg) no-repeat no-repeat bottom 100% left;
+}
+
+//////////////////////////////
+/// HEADER
+//////////////////////////////
+header {
+	margin: 6.4rem auto;
+	text-align: center;
+
+	.wrapper {
+		margin-top: 3.2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2.4rem;
+		color: $color-neutral-2;
+	}
+
+	.toggle {
+		width: 4rem;
+		background-color: rosybrown;
+		padding: 0.3rem;
+		border-radius: 10rem;
+		background: linear-gradient($color-primary-1, $color-primary-2);
+		cursor: pointer;
+
+		display: flex;
+		justify-content: flex-end;
+
+		.dot {
+			width: 1.6rem;
+			height: 1.6rem;
+			background-color: $color-neutral-1;
+			border-radius: 50%;
+			transition: all 0.1s ease;
+		}
+
+		.dot--move {
+			transform: translateX(-1.8rem);
+		}
+	}
+}
+
+//////////////////////////////
+/// TYPOGRAPHY
+//////////////////////////////
+.header-1 {
+	color: $color-neutral-3;
 }
